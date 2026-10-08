@@ -45,23 +45,10 @@
     <MinVerVerbosity>normal</MinVerVerbosity>
   </PropertyGroup>
 
-  <!-- 
-      Package reference to the license project which is consumed by src projects
-      This is a dev only reference. See the SixLabors.Src.targets file for usage.
-   -->
-  <ItemGroup>
-    <PackageReference
-        Include="SixLabors.Licensing"
-        Version="1.0.2"
-        PrivateAssets="all"
-        GeneratePathProperty="true"
-        Condition="'$(PackageId)' != 'SixLabors.Licensing' and '$(MSBuildProjectName)' != 'SixLabors.Licensing'" />
-  </ItemGroup>
-
   <!-- Package references and additional files which are consumed by src projects. CI Only -->
   <ItemGroup Condition="'$(IsContinuousIntegration)'=='true'">
     <PackageReference Include="Microsoft.SourceLink.GitHub"
-                      Version="8.0.0"
+                      Version="10.0.303"
                       PrivateAssets="All"
                       IsImplicitlyDefined="true" />
 
