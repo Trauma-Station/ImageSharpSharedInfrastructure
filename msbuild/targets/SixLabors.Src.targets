@@ -20,16 +20,4 @@
           DestinationFolder="$(SixLaborsSolutionDirectory)" />
   </Target>
 
-  <!--
-      This target is responsible for copying licensing files to the licensing NuGet package
-      to our build output.
-      See SixLabors.Src.props for the package references.
-      Hook into NuGet pack.
-  -->
-  <PropertyGroup>
-    <TargetsForTfmSpecificContentInPackage>
-      $(TargetsForTfmSpecificContentInPackage);_SixLabors_AddLicensingFiles
-    </TargetsForTfmSpecificContentInPackage>
-  </PropertyGroup>
-
 </Project>
